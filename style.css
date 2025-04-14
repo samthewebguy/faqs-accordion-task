@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #000;
+
+}
+
+.section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+    width: 100%;
+    background-color: #ede6dd ;
+    color: #1e1928;
+    padding: 96px 5%;
+}
+
+.heading h2{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.25em;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+
+.accordion-wrapper{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 0;
+    margin: 0 20px;
+}
+
+.accordion-wrapper .subheading{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.faq{
+    margin-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #1e192814;
+    cursor: pointer;
+}
+
+.question{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.question h4{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: -0.03em;
+}
+
+.icon svg{
+    width: 14px;
+    height: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.icon .minus{
+   display: none;
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+}
+
+.answer p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.answer ul {
+    padding-left: 24px;
+  }
+  
+  .answer li {
+    margin-bottom: 8px;
+  }
+
+.faq.active .answer{
+    margin-top: 16px;
+    max-height: 100%;
+    transition: 0.5s ease-in-out;
+    animation: fade 1s ease;
+}
+
+.faq.active .minus{
+   display: flex;
+   transition: 0.3s ease-in-out;
+}
+
+.faq.active .plus{
+    display: none;
+ }
+
+ @keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10PX);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+ }
+
+ @media (max-width:768px){
+
+    .heading{
+        width: 100%;
+        padding: 40px 5%;
+    }
+
+    .heading h2{
+        font-size: 30px;
+    }
+    .accordion-wrapper{
+        width: 100%;
+        padding: 40px 5%;
+        margin: 0 20px;
+    }
+ }
