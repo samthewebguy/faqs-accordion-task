@@ -11,7 +11,7 @@ Users can click on questions to reveal or hide their answers in a smooth, animat
 - Fully responsive layout
 - Easily customizable content and styling
 
-📂 Files Included
+## Files Included 📂
 
 index.html – Markup for the accordion structure
 
